@@ -20,6 +20,8 @@ class GeocodingController < ApplicationController
     raw_data = open(url).read
     
     parsed_data = JSON.parse(raw_data)
+    
+    # this must work
 
     @latitude = parsed_data["results"][0]["geometry"]["location"]["lat"]
 
